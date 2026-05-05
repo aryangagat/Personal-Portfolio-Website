@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo"><span>Aryan Gagat</span></a>
+
+    <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="SKILL.HTML">Skills</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
+
+    <a href="https://github.com/yourusername" target="_blank">
+        <button class="visit-button">Visit GitHub</button>
+    </a>
+</header>
+
+<main>
+<section id="projects" class="projects">
+    <h1 class="section-title">My Projects</h1>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <img src="https://www.notiontechnologies.com/blog/wp-content/uploads/2023/03/how-to-build-an-ecommerce-website-from-scratch.webp" alt="">
+            <h3>E-Commerce Website</h3>
+            <p> Developed a responsive e-commerce website using HTML, CSS, and JavaScript.
+                <br>
+               Implemented product listing, add-to-cart functionality, and UI design.
+               <br>
+               Focused on user-friendly interface and responsive layout.
+            </p>
+            <div class="btn-group">
+                <a href="#" class="btn">Live Demo</a>
+                <a href="https://github.com/aryangagat/E-Commerce-Website" class="btn">Github Repo</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://thumbs.dreamstime.com/b/ai-education-management-system-parse-managing-analyzing-digital-learning-data-personalizing-lessons-evaluating-student-438556917.jpg" alt="">
+            <h3>Student Management System</h3>
+            <p>Created a basic student management system project. <br>
+Managed student data using front-end technologies. <br>
+Designed structured UI for adding and displaying student records</p>
+            <div class="btn-group">
+                <a href="#" class="btn">Live Demo</a>
+                <a href="#" class="btn">Github Repo</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://img.freepik.com/premium-photo/3d-cartoon-character-developer-working-laptop-web-app-development-frontend-deployment_1298309-24594.jpg?w=360" alt="">
+            <h3>Personal Portfolio Website</h3>
+            <p>Built a personal portfolio to showcase projects and skills. <br>
+Used modern UI design with responsive layout. <br>
+Added smooth navigation and interactive elements</p>
+            <div class="btn-group">
+                <a href="#" class="btn">Live Demo</a>
+                <a href="#" class="btn">Github Repo</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://cdn.cosmicjs.com/3414b630-2fb8-11e7-8a4c-11dbea3cc073-todo-app.jpg" alt="">
+            <h3>TODO APP</h3>
+            <p>Developed a task management application using HTML, CSS, and JavaScript. <br>
+Implemented add, delete, and mark-as-complete features. <br>
+Used DOM manipulation for dynamic updates. <br>
+Designed a clean and responsive user interface</p>
+            <div class="btn-group">
+                <a href="#" class="btn">Live Demo</a>
+                <a href="https://github.com/aryangagat/Todo-App" class="btn">Github Repo</a>
+            </div>
+        </div>
+                <div class="project-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtJmHExaWhFyioLcDRA2ar6XzAuBYC2jr4Fw&s" alt="">
+            <h3>Cricket Guessing Game</h3>
+            <p>Developed a simple game using HTML, CSS, and JavaScript <br>
+Implemented game logic where the computer randomly selects (Bat/Ball) and compares it with the user’s choice. <br>
+Designed conditions such as: if computer chooses Bat and user chooses Ball, the computer wins. <br>
+Used JavaScript for random generation, conditional statements, and DOM manipulation. <br>
+Created an interactive and user-friendly interface</p>
+            <div class="btn-group">
+                <a href="#" class="btn">Live Demo</a>
+                <a href="https://github.com/aryangagat/Cricket-Guessing-Game" class="btn">Github Repo</a>
+            </div>
+
+    </div>
+</section>
+</main>
+<script>
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

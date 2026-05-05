@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="SKILL.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+</head>
+<body>
+     <header class="header">
+            <a href="index.html" class="logo"><span>Aryan Gagat</span></a>
+            <ul class="nav-links">
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                 <li>
+                    <a href="SKILL.HTML">Skills</a>
+                </li>
+                 <li>
+                    <a href="project.html">Projects</a>
+                </li>
+                 <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+                        <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
+            <button class="visit-button">Visit GitHub</button>
+        </header>
+        <main>
+            <section id="skill" class="skill">
+            <h1 class="section-title">Key Skills</h1>
+            <div class="skill-info">
+                <div class="grid">
+                    <div class="grid-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBd2rMcfI56SZEenhvautbZl_xUsPSHaktNw&s" alt="">
+                        <h3>HTML</h3>
+                        <P>Strong knowledge of HTML for creating structured web pages.</P>
+                         <input type="range" min="0" max="100" value="80" oninput="updateValue(this)">
+<span class="range-value">95%</span>
+                    </div>
+                    <div class="grid-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJDwBd9LoQzBAZigXXxzQ0kKn6TwyrE0Y7Rg&s" alt=""> 
+                        <h3>CSS</h3>
+                        <P>Proficient in CSS for styling, layouts, and responsive design.</P>
+                         <input type="range" min="0" max="100" value="80" oninput="updateValue(this)">
+<span class="range-value">82%</span>
+                    </div>
+                    <div class="grid-card">
+                        <img src="https://iconape.com/wp-content/png_logo_vector/javascript-logo.png" alt="">
+                        <h3>Java Script</h3>
+                        <P>JavaScript for interactive web features and DOM manipulation.</P>
+                         <input type="range" min="0" max="100" value="80" oninput="updateValue(this)">
+<span class="range-value">75%</span>
+                    </div>
+                    <div class="grid-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/500px-C_Programming_Language.svg.png" alt="">
+                        <h3>C Language</h3>
+                        <P>Basics, control structures, functions, arrays</P>
+                         <input type="range" min="0" max="100" value="80" oninput="updateValue(this)">
+                         <span class="range-value">78%</span>
+                    </div>
+                    <div class="grid-card">
+                        <img src="https://play-lh.googleusercontent.com/a4Xrc-8oQLu05mOrNPuvA_o2nZEIEnOoTH4wB91Slw_hCvuIu_Qgi440bK9mC8ml-KA" alt="">
+                        <h3>DSA</h3>
+                        <P>Basic understanding of Data Structures and Algorithms for efficient coding</P>
+                       <input type="range" min="0" max="100" value="80" oninput="updateValue(this)">
+                       <span class="range-value">70%</span>
+                    </div>
+                    <div class="grid-card">
+                        <img src="https://e7.pngegg.com/pngimages/689/806/png-clipart-database-management-system-computer-icons-relational-model-bases-de-datos-angle-data-thumbnail.png" alt="">
+                        <h3>DBMS</h3>
+                        <P>Basic concepts, SQL queries, database design</P>
+                         <input type="range" min="0" max="100" value="80" oninput="updateValue(this)">
+                         <span class="range-value">80%</span>
+                    </div>
+                </div>
+            </div>
+            </section>
+        </main>
+        <script>
+const sliders = document.querySelectorAll("input[type='range']");
+sliders.forEach((slider, index) => {
+    const savedValue = localStorage.getItem("slider_" + index);
+    if (savedValue !== null) {
+        slider.value = savedValue;
+    }
+    slider.addEventListener("input", () => {
+        localStorage.setItem("slider_" + index, slider.value);
+    });
+     function updateSlider() {
+        const value = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+        slider.style.background = `linear-gradient(to right, rgb(0,157,255), rgb(255,0,255) ${value}%, #ddd ${value}%)`;
+    }
+    updateSlider();
+    slider.addEventListener("input", updateSlider);
+});
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("active");
+}
+</script>
+</body>
+</html>

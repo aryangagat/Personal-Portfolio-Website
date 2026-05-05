@@ -1,0 +1,217 @@
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    background: linear-gradient(to right, #1e1e2f, #2c2c54);
+    color: #fff;
+    padding-bottom: 2%;
+}
+header{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 5rem ;
+    backdrop-filter: blur(8px);
+    padding: 0.5rem 1.5rem;
+    border-radius: 3rem;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1000;
+    position: fixed;
+    top: 1rem;
+    color: white;
+}
+.logo {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-wrap: nowrap;
+    transition: 0.3s ease-in-out;
+    margin-right: 60px;
+
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.nav-links{
+    display: flex;
+    gap: 2rem;
+}
+li a{
+    position: relative;
+    color: rgb(194, 194, 194);
+    font-weight: 300;
+}
+
+li a::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    left: 0;
+    height: 5px;
+    top: 25px;
+    border-radius: 1rem;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(to right,rgb(0,157,255), rgb(255,0,255));
+}
+li a:hover::before{
+    width:100%
+}
+
+.visit-button{
+    padding: 0.8rem 1.5rem;
+    margin-left: 40px;
+    border-radius: 3rem;
+    border: none;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    text-wrap: nowrap;
+    transition: 0.3 ease-in-out;
+    background: linear-gradient(to right,rgb(0,157,255), rgb(255,0,255));
+}
+.visit-button:hover {
+    background: linear-gradient(to right,rgb(255,0,255), rgb(0,157,255));
+    transform: scale(1.03);
+}
+.section-title{
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    margin-top: 115px;
+}
+.section-title::after {
+    content: "";
+    width: 200px;
+    height: 4px;
+    background: linear-gradient(to right,rgb(0,157,255), rgb(255,0,255));
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+.skill-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.grid-card{
+    border: 2px solid whitesmoke;
+    border-radius: 3rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: left;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    
+}
+.grid-card:hover{
+    transform: scale(1.02);
+    background-color:black;
+    color:white;
+}
+.grid-card :hover::before{
+    width:100%
+}
+.grid-card img {
+    width: 20px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.grid-card input[type="range"] {
+    width: 100%;
+    margin-top: 15px;
+    appearance: none;
+    height: 8px;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+.grid-card input[type="range"]::-webkit-slider-thumb {
+    visibility: hidden;
+}
+.range-value{
+    margin-top: 3%;
+    color: whitesmoke;
+    font-size: 1rem;
+}
+.grid-card h3 {
+    font-size: 30px;
+    font-weight: 900;
+    background: linear-gradient(to right,rgb(255,0,255), rgb(0,157,255));
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+}
+.menu-icon{
+    font-size: 1rem;
+    margin-left: 3%;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 768px) {
+    .skill-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .skill-info img {
+        width: 60%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 70%;
+        width: 100%;
+        margin-left: 30%;
+    }
+    .grid-card {
+        margin-bottom: 20px;
+    }
+    header {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .section-title{
+        margin-top: 30%;
+    }
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        width: 30%;
+        align-items: center;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex; 
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+    }
+    .nav-links li a {
+        color: #fff;
+    }
+}

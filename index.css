@@ -143,6 +143,7 @@ border-radius: 50%;
     font-weight: 500;
     text-wrap: nowrap;
     transition: 0.2s ease-in-out;
+    color: white;
 }
 .btn:hover {
     background-color: black;
@@ -156,16 +157,16 @@ border-radius: 50%;
     font-size: 2.5rem;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+    color: white;
 }
 .social i:hover{
     transform: scale(1.1);
 }
-@media (max-width: 768px) {
+@media (max-width: 1248px) {
     .about-container {
         flex-direction: column;
         text-align: center;
     }
-
     .about-container img {
         width: 80%;
     }
@@ -187,6 +188,11 @@ border-radius: 50%;
         width: 30%;
         align-items: center;
         display: none;
+         flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+        background: rgba(0,0,0,0.9);
+        border-radius: 3rem;
     }
 
     .nav-links.active {
@@ -201,3 +207,4 @@ border-radius: 50%;
     }
 
 }
+

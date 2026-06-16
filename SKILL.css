@@ -202,6 +202,11 @@ li a:hover::before{
         width: 30%;
         align-items: center;
         display: none;
+         flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+        background: rgba(0,0,0,0.9);
+        border-radius: 3rem;
     }
 
     .nav-links.active {
